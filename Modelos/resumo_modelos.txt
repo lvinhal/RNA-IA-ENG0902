@@ -1,0 +1,69 @@
+RESUMO DOS MODELOS TREINADOS - PROJETO RNA ETAPA 01
+============================================================
+
+CONFIGURAÇÕES DE TREINAMENTO:
+- Arquitetura: 3 → 10 → 1
+- Função ativação oculta: Sigmoide
+- Função ativação saída: Linear
+- Taxa de aprendizado: 0.1
+- Momentum: 0.9
+- Precisão alvo: 1e-6
+- Máximo de épocas: 3.000.000
+
+RESULTADOS POR MODELO:
+------------------------------------------------------------
+MODELO T1:
+  Arquivo: modelo_T1.pth
+  Épocas: 1,446,191
+  MSE final: 1.00e-06
+  Tempo treinamento: 815.95s
+  Erro relativo médio: 0.17%
+  Variância: 0.02%
+
+MODELO T2:
+  Arquivo: modelo_T2.pth
+  Épocas: 1,159,584
+  MSE final: 1.00e-06
+  Tempo treinamento: 579.54s
+  Erro relativo médio: 0.21%
+  Variância: 0.02%
+
+MODELO T3:
+  Arquivo: modelo_T3.pth
+  Épocas: 1,026,855
+  MSE final: 1.00e-06
+  Tempo treinamento: 499.85s
+  Erro relativo médio: 0.22%
+  Variância: 0.01%
+
+MODELO T4:
+  Arquivo: modelo_T4.pth
+  Épocas: 1,175,601
+  MSE final: 1.00e-06
+  Tempo treinamento: 842.29s
+  Erro relativo médio: 0.17%
+  Variância: 0.02%
+
+MODELO T5:
+  Arquivo: modelo_T5.pth
+  Épocas: 1,000,635
+  MSE final: 1.00e-06
+  Tempo treinamento: 571.17s
+  Erro relativo médio: 0.16%
+  Variância: 0.01%
+
+RECOMENDAÇÃO:
+------------------------------------------------------------
+Melhor modelo: T5
+Erro relativo médio: 0.16%
+Arquivo: modelo_T5.pth
+
+INSTRUÇÕES DE USO:
+------------------------------------------------------------
+Para carregar um modelo:
+```python
+model, info = carregar_modelo('Modelos/modelo_T1.pth')
+model.eval()
+with torch.no_grad():
+    output = model(input_tensor)
+```
